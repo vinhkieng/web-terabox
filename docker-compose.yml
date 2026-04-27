@@ -1,0 +1,14 @@
+
+
+services:
+  terabox-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: terabox-images
+    container_name: terabox-website
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Ho_Chi_Minh

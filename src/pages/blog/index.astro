@@ -1,0 +1,257 @@
+---
+import Layout from '../../components/Layout.astro';
+
+const posts = [
+  {
+    id: 1,
+    category: "Cloud",
+    tag: "hot",
+    title: "So sánh Public Cloud và Private Cloud: Doanh nghiệp nên chọn gì?",
+    excerpt: "Hiểu rõ sự khác biệt giữa Public Cloud và Private Cloud để đưa ra quyết định phù hợp với quy mô, ngân sách và yêu cầu bảo mật của doanh nghiệp bạn.",
+    author: "Đội ngũ TeraBox",
+    date: "15/04/2025",
+    readTime: "8 phút đọc",
+    img: "/chuc_nang.jpg",
+    slug: "so-sanh-public-cloud-private-cloud"
+  },
+  {
+    id: 2,
+    category: "Backup & DR",
+    tag: "new",
+    title: "DRaaS là gì? Tại sao doanh nghiệp cần Disaster Recovery as a Service?",
+    excerpt: "Tìm hiểu về DRaaS — giải pháp phục hồi thảm họa dưới dạng dịch vụ — và lý do tại sao đây là lựa chọn không thể thiếu cho các doanh nghiệp muốn đảm bảo liên tục hoạt động.",
+    author: "Kỹ sư TeraBox",
+    date: "10/04/2025",
+    readTime: "6 phút đọc",
+    img: "/corevalue.jpg",
+    slug: "draas-la-gi-tai-sao-doanh-nghiep-can"
+  },
+  {
+    id: 3,
+    category: "Bảo mật",
+    tag: "",
+    title: "Bảo mật đa tầng cho hạ tầng Cloud: Hướng dẫn toàn diện 2025",
+    excerpt: "Khám phá các lớp bảo mật cần thiết để bảo vệ hạ tầng Cloud của doanh nghiệp — từ tầng vật lý tại data center đến tầng ứng dụng và mạng.",
+    author: "Chuyên gia Bảo mật TeraBox",
+    date: "05/04/2025",
+    readTime: "10 phút đọc",
+    img: "/baomat.jpg",
+    slug: "bao-mat-da-tang-ha-tang-cloud-2025"
+  },
+  {
+    id: 4,
+    category: "Managed Cloud",
+    tag: "",
+    title: "Managed Cloud Service giúp doanh nghiệp tiết kiệm chi phí như thế nào?",
+    excerpt: "Phân tích chi tiết về mô hình Managed Cloud và cách dịch vụ này giúp doanh nghiệp giảm tải IT nội bộ, cắt giảm chi phí vận hành và tập trung vào phát triển kinh doanh.",
+    author: "Đội ngũ TeraBox",
+    date: "01/04/2025",
+    readTime: "7 phút đọc",
+    img: "/manacloud.jpg",
+    slug: "managed-cloud-service-tiet-kiem-chi-phi"
+  },
+  {
+    id: 5,
+    category: "Cloud",
+    tag: "hot",
+    title: "Xu hướng Cloud Computing 2025: Những gì doanh nghiệp Việt cần biết",
+    excerpt: "Tổng hợp các xu hướng công nghệ Cloud nổi bật năm 2025 — từ AI Cloud, Multi-Cloud đến FinOps — và cách các doanh nghiệp Việt Nam có thể tận dụng những cơ hội này.",
+    author: "Đội ngũ TeraBox",
+    date: "25/03/2025",
+    readTime: "9 phút đọc",
+    img: "/database.jpg",
+    slug: "xu-huong-cloud-computing-2025"
+  },
+  {
+    id: 6,
+    category: "Case Study",
+    tag: "new",
+    title: "Case Study: GoPay đảm bảo vận hành 24/7 với TeraBox Private Cloud",
+    excerpt: "Tìm hiểu cách TeraBox giúp GoPay tối ưu hóa hơn 300 VM, đảm bảo uptime 99.99% và duy trì vận hành liên tục cho hàng triệu người dùng mỗi ngày.",
+    author: "Đội ngũ TeraBox",
+    date: "20/03/2025",
+    readTime: "5 phút đọc",
+    img: "/casestudy.jpg",
+    slug: "case-study-gopay-terabox-private-cloud"
+  }
+];
+
+const categories = ["Tất cả", "Cloud", "Backup & DR", "Bảo mật", "Managed Cloud", "Case Study"];
+---
+
+<Layout title="Blog & Tin tức | TeraBox Technology">
+
+  <nav class="service-subnav">
+    <ul>
+      <li><a href="#blog-hero" class="subnav-link active">Blog</a></li>
+      <li><a href="#blog-featured" class="subnav-link">Nổi bật</a></li>
+      <li><a href="#blog-all" class="subnav-link">Tất cả bài viết</a></li>
+      <li><a href="#blog-newsletter" class="subnav-link">Đăng ký nhận tin</a></li>
+    </ul>
+  </nav>
+
+  <div class="blog-page">
+
+    <section class="srv-hero blog-hero" id="blog-hero">
+      <div class="srv-hero-text">
+        <span class="srv-label">Blog & Tin tức</span>
+        <h1>Kiến thức Cloud cho doanh nghiệp Việt Nam</h1>
+        <p>Cập nhật xu hướng công nghệ mới nhất, hướng dẫn thực tiễn và case study từ đội ngũ chuyên gia TeraBox — giúp bạn đưa ra quyết định công nghệ đúng đắn cho doanh nghiệp.</p>
+        <div class="hero-buttons">
+          <a href="#blog-all" class="btn-primary">Xem tất cả bài viết</a>
+          <a href="#blog-newsletter" class="btn-secondary">Đăng ký nhận tin</a>
+        </div>
+      </div>
+      <div class="srv-hero-img">
+        <!-- <img src="/clock_services.jpg" alt="TeraBox Blog" /> -->
+      </div>
+    </section>
+
+    <section class="blog-featured" id="blog-featured">
+      <div class="section-title">
+        <h2>Bài viết nổi bật</h2>
+      </div>
+      <div class="featured-card">
+        <div class="featured-img">
+          <img src={posts[0].img} alt={posts[0].title} />
+          <span class="post-tag hot">HOT</span>
+        </div>
+        <div class="featured-info">
+          <span class="post-category">{posts[0].category}</span>
+          <h2>{posts[0].title}</h2>
+          <p>{posts[0].excerpt}</p>
+          <div class="post-meta">
+            <span>✍️ {posts[0].author}</span>
+            <span>📅 {posts[0].date}</span>
+            <span>⏱️ {posts[0].readTime}</span>
+          </div>
+          <a href={`/blog/${posts[0].slug}`} class="btn-primary">Đọc bài viết →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-all" id="blog-all">
+      <div class="blog-header-row">
+        <div class="section-title" style="margin-bottom:0">
+          <h2>Tất cả bài viết</h2>
+        </div>
+        <div class="blog-filter">
+          {categories.map((cat) => (
+            <button class={`filter-btn${cat === "Tất cả" ? " active" : ""}`} data-cat={cat}>
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        {posts.map((post) => (
+          <article class="post-card" data-cat={post.category}>
+            <a href={`/blog/${post.slug}`} class="post-img-link">
+              <img src={post.img} alt={post.title} />
+              {post.tag === "hot" && <span class="post-tag hot">HOT</span>}
+              {post.tag === "new" && <span class="post-tag new-tag">MỚI</span>}
+            </a>
+            <div class="post-body">
+              <span class="post-category">{post.category}</span>
+              <h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3>
+              <p class="post-excerpt">{post.excerpt}</p>
+              <div class="post-meta">
+                <span>📅 {post.date}</span>
+                <span>⏱️ {post.readTime}</span>
+              </div>
+              <a href={`/blog/${post.slug}`} class="post-read-more">Đọc tiếp →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- <div class="blog-pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn page-next">Tiếp theo →</button>
+      </div> -->
+    </section>
+
+    <section class="blog-newsletter" id="blog-newsletter">
+      <div class="newsletter-card">
+        <div class="newsletter-text">
+          <h2>Đăng ký nhận bản tin công nghệ</h2>
+          <p>Nhận các bài viết mới nhất, hướng dẫn kỹ thuật và cập nhật xu hướng Cloud trực tiếp vào hộp thư của bạn — mỗi tuần một lần, không spam.</p>
+          <ul class="newsletter-benefits">
+            <li>✓ Bài viết chuyên sâu từ đội ngũ kỹ sư TeraBox</li>
+            <li>✓ Cập nhật xu hướng Cloud mới nhất</li>
+            <li>✓ Ưu đãi độc quyền cho người đăng ký</li>
+          </ul>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletterForm">
+            <div class="form-group">
+              <label for="nl-name">Họ và tên</label>
+              <input type="text" id="nl-name" placeholder="Nguyễn Văn A" />
+            </div>
+            <div class="form-group">
+              <label for="nl-email">Địa chỉ Email <span class="required">*</span></label>
+              <input type="email" id="nl-email" placeholder="email@congty.com" required />
+            </div>
+            <button type="submit" class="btn-primary btn-submit">Đăng ký nhận tin →</button>
+            <div class="form-success" id="nlSuccess">
+              ✅ Đăng ký thành công! Cảm ơn bạn đã quan tâm đến TeraBox.
+            </div>
+          </form>
+          <p class="nl-note">Chúng tôi tôn trọng quyền riêng tư của bạn. Hủy đăng ký bất kỳ lúc nào.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const postCards = document.querySelectorAll('.post-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = (btn as HTMLElement).dataset.cat;
+      postCards.forEach(card => {
+        if (cat === 'Tất cả' || (card as HTMLElement).dataset.cat === cat) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  const nlForm = document.getElementById('newsletterForm');
+  const nlSuccess = document.getElementById('nlSuccess');
+  if (nlForm) {
+    nlForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (nlSuccess) {
+        nlSuccess.style.display = 'block';
+        (nlForm as HTMLFormElement).reset();
+        setTimeout(() => { nlSuccess.style.display = 'none'; }, 5000);
+      }
+    });
+  }
+
+  const subnavLinks = document.querySelectorAll('.subnav-link');
+  const anchors = ['blog-hero','blog-featured','blog-all','blog-newsletter'];
+  window.addEventListener('scroll', () => {
+    let current = '';
+    anchors.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 130) current = id;
+    });
+    subnavLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>

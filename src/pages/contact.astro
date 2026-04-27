@@ -1,0 +1,275 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Liên hệ | TeraBox Technology">
+
+  <!-- Sub-nav anchor -->
+  <nav class="service-subnav">
+    <ul>
+      <li><a href="#contact-hero" class="subnav-link active">Liên hệ</a></li>
+      <li><a href="#contact-form" class="subnav-link">Gửi yêu cầu</a></li>
+      <li><a href="#contact-info" class="subnav-link">Thông tin</a></li>
+      <li><a href="#contact-map" class="subnav-link">Bản đồ</a></li>
+      <li><a href="#contact-faq" class="subnav-link">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-page">
+
+    <!-- ===== HERO ===== -->
+    <section class="srv-hero contact-hero" id="contact-hero">
+      <div class="srv-hero-text">
+        <span class="srv-label">Liên hệ với chúng tôi</span>
+        <h1>Chúng tôi luôn sẵn sàng lắng nghe bạn</h1>
+        <p>Dù bạn cần tư vấn giải pháp, hỗ trợ kỹ thuật hay muốn tìm hiểu thêm về dịch vụ — đội ngũ chuyên gia TeraBox luôn sẵn sàng đồng hành.</p>
+        <p>Phản hồi trong vòng <strong>4 giờ làm việc</strong> với mọi yêu cầu.</p>
+        <div class="hero-buttons">
+          <a href="tel:02873009009" class="btn-secondary"> 028 7300 9009</a>
+        </div>
+      </div>
+      <div class="srv-hero-img">
+        <img src="/contact.jpg" alt="TeraBox Support Team" />
+      </div>
+    </section>
+
+    <!-- ===== CONTACT CARDS ===== -->
+    <section class="contact-channels">
+      <div class="channels-grid">
+        <div class="channel-card">
+         
+          <h3>Gọi điện trực tiếp</h3>
+          <p>Kết nối ngay với chuyên gia tư vấn của chúng tôi qua điện thoại.</p>
+          <a href="tel:02873009009" class="channel-link">028 7300 9009</a>
+        </div>
+        <div class="channel-card">
+          
+          <h3>Gửi Email</h3>
+          <p>Gửi email và đội ngũ sẽ phản hồi trong vòng 4 giờ làm việc.</p>
+          <a href="mailto:info@terabox.vn" class="channel-link">info@terabox.vn</a>
+        </div>
+        <div class="channel-card">
+         
+          <h3>Live Chat</h3>
+          <p>Trò chuyện trực tiếp với chuyên gia hỗ trợ ngay trên website.</p>
+          <a href="#" class="channel-link">Bắt đầu chat →</a>
+        </div>
+        <div class="channel-card">
+         
+          <h3>Giờ làm việc</h3>
+          <p>Thứ Hai – Thứ Sáu: <strong>8:00 – 18:00</strong><br/>Hỗ trợ kỹ thuật: <strong>24/7/365</strong></p>
+          <a href="#contact-form" class="channel-link">Đặt lịch tư vấn →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <!--  <section class="contact-form-section" id="contact-form"> -->
+      <div class="section-title">
+        <h2>Gửi yêu cầu tư vấn</h2>
+        <p>Điền thông tin bên dưới và chuyên gia của chúng tôi sẽ liên hệ lại trong vòng 4 giờ làm việc.</p>
+      </div>
+      <div class="form-layout">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Họ và tên <span class="required">*</span></label>
+              <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Tên công ty <span class="required">*</span></label>
+              <input type="text" id="company" name="company" placeholder="Công ty TNHH ABC" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="email@congty.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Số điện thoại <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="0901 234 567" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Dịch vụ quan tâm</label>
+            <select id="service" name="service">
+              <option value="">-- Chọn dịch vụ --</option>
+              <option value="public-cloud">Public Cloud Server</option>
+              <option value="private-cloud">Private Cloud Server</option>
+              <option value="cloud-backup">Cloud Backup</option>
+              <option value="disaster-recovery">Disaster Recovery (DRaaS)</option>
+              <option value="managed-cloud">Managed Cloud Service</option>
+              <option value="consulting">Tư vấn kỹ thuật</option>
+              <option value="other">Khác</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Nội dung yêu cầu <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Mô tả nhu cầu hoặc câu hỏi của bạn..." required></textarea>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">Tôi đồng ý với <a href="#">Chính sách bảo mật</a> của TeraBox Technology</label>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">Gửi yêu cầu tư vấn</button>
+          <div class="form-success" id="formSuccess">
+          Yêu cầu của bạn đã được gửi thành công! Chúng tôi sẽ liên hệ lại trong vòng 4 giờ làm việc.
+          </div>
+        </form>
+
+        <div class="form-sidebar">
+          <div class="sidebar-card">
+            <h4> Cam kết của chúng tôi</h4>
+            <ul>
+              <li>✓ Phản hồi trong vòng 4 giờ làm việc</li>
+              <li>✓ Tư vấn miễn phí, không ràng buộc</li>
+              <li>✓ Bảo mật thông tin tuyệt đối</li>
+              <li>✓ Giải pháp tùy chỉnh theo nhu cầu</li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <h4> Địa chỉ văn phòng</h4>
+            <p>55 Nguyễn Văn Linh, Phường Tân Thuận Tây, Quận 7, TP. Hồ Chí Minh</p>
+          </div>
+          <div class="sidebar-card">
+            <h4> Đã được tin tưởng bởi</h4>
+            <div class="sidebar-logos">
+              <span class="sidebar-logo-tag">Circle K</span>
+              <span class="sidebar-logo-tag">DBS Bank</span>
+              <span class="sidebar-logo-tag">Guardian</span>
+              <span class="sidebar-logo-tag">Pizza Hut</span>
+              <span class="sidebar-logo-tag">GoPay</span>
+              <span class="sidebar-logo-tag">Mobifone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <!-- ===== CONTACT INFO ===== -->
+    <section class="contact-info-section" id="contact-info">
+      <div class="section-title">
+        <h2>Thông tin liên hệ</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          
+          <h3>Trụ sở chính</h3>
+          <p>Số 66 đường số 9, KDC Trung Sơn <br/>Quận 7, TP. Hồ Chí Minh</p>
+        </div>
+        <div class="info-card">
+          
+          <h3>Điện thoại</h3>
+          <p><a href="tel:02873009009">028 7300 9009</a></p>
+          <p class="info-sub">Hỗ trợ kỹ thuật 24/7: <a href="tel:02873009009">028 7300 9009</a></p>
+        </div>
+        <div class="info-card">
+          
+          <h3>Email</h3>
+          <p><a href="mailto:info@terabox.vn">info@terabox.vn</a></p>
+          <p class="info-sub">Hỗ trợ kỹ thuật: <a href="mailto:support@terabox.vn">support@terabox.vn</a></p>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="contact-map-section" id="contact-map">
+      <div class="section-title">
+        <h2>Vị trí văn phòng</h2>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0!2d106.6893312!3d10.7380736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ0JzE3LjEiTiAxMDbCsDQxJzIxLjYiRQ!5e0!3m2!1svi!2s!4v1234567890"
+          width="100%"
+          height="400"
+          style="border:0; border-radius: 16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="TeraBox Technology Location">
+        </iframe>
+        <div class="map-address-card">
+          <div class="map-icon">📍</div>
+          <div>
+            <strong>TeraBox Technology</strong>
+            <p>Số 66 đường số 9, KDC Trung Sơn TP. Hồ Chí Minh</p>
+            <a href="https://www.google.com/maps/search/S%E1%BB%91+66+%C4%91%C6%B0%E1%BB%9Dng+s%E1%BB%91+9,+KDC+Trung+S%C6%A1n+TP.+H%E1%BB%93+Ch%C3%AD+Minh" target="_blank" class="btn-primary" style="display:inline-block;margin-top:10px;font-size:0.85rem;padding:8px 18px;">Chỉ đường →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="srv-faq" id="contact-faq">
+      <div class="section-title">
+        <h2>Câu hỏi thường gặp</h2>
+      </div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <div class="faq-q">TeraBox phản hồi yêu cầu trong bao lâu? <span class="faq-chevron">▼</span></div>
+          <div class="faq-a">Chúng tôi cam kết phản hồi mọi yêu cầu trong vòng 4 giờ làm việc. Đối với các sự cố kỹ thuật khẩn cấp (P1), đội ngũ hỗ trợ sẽ phản hồi trong vòng 15 phút.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Dịch vụ tư vấn có mất phí không? <span class="faq-chevron">▼</span></div>
+          <div class="faq-a">Buổi tư vấn ban đầu hoàn toàn miễn phí. Chuyên gia của chúng tôi sẽ lắng nghe nhu cầu và đề xuất giải pháp phù hợp nhất mà không có bất kỳ ràng buộc nào.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">TeraBox có hỗ trợ tại chỗ (onsite) không? <span class="faq-chevron">▼</span></div>
+          <div class="faq-a">Có. Đội ngũ kỹ sư của TeraBox có thể hỗ trợ onsite tại TP. Hồ Chí Minh và các tỉnh thành lớn. Liên hệ để sắp xếp lịch kỹ sư đến trực tiếp.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Tôi có thể dùng thử dịch vụ trước khi ký hợp đồng không? <span class="faq-chevron">▼</span></div>
+          <div class="faq-a">Có. TeraBox cung cấp giai đoạn thử nghiệm (POC - Proof of Concept) miễn phí cho các dịch vụ chính. Liên hệ đội ngũ kinh doanh để được hỗ trợ cấu hình môi trường thử nghiệm.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Có thể liên hệ hỗ trợ kỹ thuật ngoài giờ hành chính không? <span class="faq-chevron">▼</span></div>
+          <div class="faq-a">Có. Hỗ trợ kỹ thuật của TeraBox hoạt động 24/7/365. Ngoài giờ hành chính, bạn có thể liên hệ qua hotline, hệ thống ticket hoặc email hỗ trợ khẩn cấp.</div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+  <!-- end contact-page -->
+
+</Layout>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Form submit
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (success) {
+        success.style.display = 'block';
+        form.reset();
+        setTimeout(() => { success.style.display = 'none'; }, 6000);
+      }
+    });
+  }
+
+  // Subnav active on scroll
+  const subnavLinks = document.querySelectorAll('.subnav-link');
+  const anchors = ['contact-hero','contact-form','contact-info','contact-map','contact-faq'];
+  window.addEventListener('scroll', () => {
+    let current = '';
+    anchors.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 130) current = id;
+    });
+    subnavLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+
