@@ -1990,8 +1990,10 @@ p {
 }
 .post-content h2 {
   font-size: 1.45rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #1a2340;
+  line-height: 1.3;
+  text-transform: none;
   margin: 40px 0 16px;
   padding-bottom: 10px;
   border-bottom: 2px solid #e0f2fe;
@@ -2015,7 +2017,10 @@ p {
   color: #475569;
   line-height: 1.75;
 }
-.post-content strong { color: #1a2340; }
+.post-content strong {
+  font-weight: 400;
+  color: inherit;
+}
 
 /* Compare Table */
 .compare-table {
