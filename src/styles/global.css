@@ -58,6 +58,24 @@ p {
 /* ============================================================
   HEADER / NAVBAR 
    ============================================================ */
+   /* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+/* Footer logo specific */
+.footer-logo .logo h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin: 0; /* override default margin */
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -2750,3 +2768,4 @@ p {
     padding: 30px 20px;
   }
 }
+
