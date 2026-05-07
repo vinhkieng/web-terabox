@@ -170,6 +170,147 @@ p {
 
 
 /* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 50px 5%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.footer-logo,
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-logo p,
+.footer-column p,
+.footer-column li,
+.footer-column a {
+  color: #cbd5e1;
+}
+
+.footer-logo .logo {
+  align-items: flex-start;
+}
+
+.footer-logo .logo img {
+  height: 60px;
+  width: auto;
+  border-radius: 12px;
+}
+
+.footer-logo .logo h2 {
+  color:  #2563eb;
+  font-size: 1.9rem;
+  margin-top: 0.5rem;
+}
+
+.footer-column h3,
+.footer-logo h2 {
+  color: #ffffff;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-column li a:hover {
+  color: #60a5fa;
+}
+
+.service-link {
+  color: #1a1a1a !important;
+}
+
+.service-link:hover {
+  color: #2563eb !important;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  background: #2563eb;
+}
+
+.contact-info p {
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    padding: 35px 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .footer-logo .logo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
    HERO SECTION 
    ============================================================ */
 .hero {
