@@ -37,25 +37,21 @@ import Layout from '../components/Layout.astro';
     <section class="contact-channels">
       <div class="channels-grid">
         <div class="channel-card">
-         
           <h3>Gọi điện trực tiếp</h3>
           <p>Kết nối ngay với chuyên gia tư vấn của chúng tôi qua điện thoại.</p>
           <a href="tel:02873009009" class="channel-link">028 7300 9009</a>
         </div>
         <div class="channel-card">
-          
           <h3>Gửi Email</h3>
           <p>Gửi email và đội ngũ sẽ phản hồi trong vòng 4 giờ làm việc.</p>
           <a href="mailto:info@terabox.vn" class="channel-link">info@terabox.vn</a>
         </div>
         <div class="channel-card">
-         
           <h3>Live Chat</h3>
           <p>Trò chuyện trực tiếp với chuyên gia hỗ trợ ngay trên website.</p>
           <a href="#" class="channel-link">Bắt đầu chat →</a>
         </div>
         <div class="channel-card">
-         
           <h3>Giờ làm việc</h3>
           <p>Thứ Hai - Thứ Sáu: <strong>8:00 - 18:00</strong><br/>Hỗ trợ kỹ thuật: <strong>24/7/365</strong></p>
           <a href="#contact-form" class="channel-link">Đặt lịch tư vấn →</a>
@@ -145,8 +141,7 @@ import Layout from '../components/Layout.astro';
           </div>
         </div>
       </div>
-    </section> 
-
+    </section>
     <!-- ===== CONTACT INFO ===== -->
     <section class="contact-info-section" id="contact-info">
       <div class="section-title">
@@ -237,21 +232,44 @@ import Layout from '../components/Layout.astro';
 
 <script>
   // FAQ accordion
+  // document.querySelectorAll('.faq-q').forEach(q => {
+  //   q.addEventListener('click', () => {
+  //     q?.parentElement.classList.toggle('open');
+  //   });
+  // }); 
+
+  // // Form submit
+  // const form = document.getElementById('contactForm');
+  // const success = document.getElementById('formSuccess');
+  // if (form) {
+  //   form.addEventListener('submit', (e) => {
+  //     e.preventDefault();
+  //     if (success) {
+  //       success.style.display = 'block';
+  //       form.reset();
+  //       setTimeout(() => { success.style.display = 'none'; }, 6000);
+  //     }
+  //   });
+  // }
+
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
+      // Đã sửa: Chuyển dấu ? ra sau parentElement
+      q.parentElement?.classList.toggle('open');
     });
-  });
+  }); 
 
   // Form submit
-  const form = document.getElementById('contactForm');
+  // Đã sửa: Thêm "as HTMLFormElement" để ép kiểu
+  const form = document.getElementById('contactForm') as HTMLFormElement;
   const success = document.getElementById('formSuccess');
+  
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (success) {
         success.style.display = 'block';
-        form.reset();
+        form.reset(); // Bây giờ TypeScript đã hiểu đây là Form nên sẽ không báo lỗi reset nữa
         setTimeout(() => { success.style.display = 'none'; }, 6000);
       }
     });
